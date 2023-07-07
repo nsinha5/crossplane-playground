@@ -1,0 +1,15 @@
+apiVersion: blackrock.com/v1alpha1
+kind: BlkappClaim
+metadata:
+  name: platform-toolkit
+  labels:
+    app-owner: nasinha
+spec:
+  id: platform-toolkit
+  compositionSelector:
+    matchLabels:
+      type: backend
+  parameters:
+    namespace: b-team
+    image: vfarcic/devops-toolkit-series:4.0.0
+    host: devops-toolkit.127.0.0.1.nip.io
