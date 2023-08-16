@@ -29,6 +29,21 @@ metadata:
   name: crossplane-provider-kubernetes
 spec:
   serviceAccountName: crossplane-provider-kubernetes
+  env:
+  - name: HTTP_PROXY
+    value: 'http://application-proxy.blackrock.com:9443'
+  - name: HTTPS_PROXY
+    value: 'http://application-proxy.blackrock.com:9443'
+  - name: http_proxy
+    value: 'http://application-proxy.blackrock.com:9443'
+  - name: https_proxy
+    value: 'http://application-proxy.blackrock.com:9443'
+  - name: NO_PROXY
+    value: '10.43.0.1,privatelink.westeurope.azmk8s.io,privatelink.northeurope.azmk8s.io,privatelink.westus2.azmk8s.io,privatelink.eastus2.azmk8s.io,29.12.192.194,.blackrock.com,.na.blkint.com,localhost,127.0.0.1,argocd-repo-server,argocd-application-controller,argocd-metrics,argocd-server,argocd-server-metrics,argocd-redis,argocd-dex-server,10.0.0.0/8'
+  - name: no_proxy
+    value: '10.43.0.1,privatelink.westeurope.azmk8s.io,privatelink.northeurope.azmk8s.io,privatelink.westus2.azmk8s.io,privatelink.eastus2.azmk8s.io,29.12.192.194,.blackrock.com,.na.blkint.com,localhost,127.0.0.1,argocd-repo-server,argocd-application-controller,argocd-metrics,argocd-server,argocd-server-metrics,argocd-redis,argocd-dex-server,10.0.0.0/8'
+           
+
 
 ---
 
